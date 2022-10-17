@@ -1,0 +1,27 @@
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"marta",
+    "password":"1233"
+}
+
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+###
+GET http://localhost:9000/api/users/634dd9e360fa69404c6dd7d7 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":"634dd9e360fa69404c6dd7d7",
+    "name":"marto",
+    "password":"1"
+}
+
+###
+DELETE  http://localhost:9000/api/users/634ddabc56034f1a9bce5c63 HTTP/1.1
