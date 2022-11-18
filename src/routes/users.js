@@ -2,7 +2,7 @@ const expres = require("express");
 const userSchema = require("../models/user");
 const bcrypt = require("bcrypt");
 const router = expres.Router();
-
+ 
 //Crear usuario
 router.post("/users", (req, res) => {
     const { name, email, password } = req.body;
@@ -29,11 +29,20 @@ router.post("/users", (req, res) => {
 });
 
 //Obtener un usuario
-router.get("/users/:id", (req, res) => {
+router.get("/user/:id", (req, res) => {
     const { id } = req.params;
     console.log(id);
     userSchema
         .findById(id)
+        .then((data) => res.send(data))
+        .catch((err) => res.send(err));
+});
+
+//Obtener un usuarios
+router.get("/users", (req, res) => {
+    console.log("se entro")
+    userSchema
+        .find()
         .then((data) => res.send(data))
         .catch((err) => res.send(err));
 });

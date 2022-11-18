@@ -17,7 +17,7 @@ app.use(expres.json());
 app.use("/api", [userRoutes, pedidosRoutes]);
 
 //routes
-app.get("/", (req, res) => {
+app.get("/", (req, res) => { 
     res.send("Ya ingresaste a mi api");
 });
 

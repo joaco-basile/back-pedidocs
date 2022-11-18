@@ -4,11 +4,13 @@ POST http://localhost:5000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "name":"joaco",
+    "name":"marce",
     "password":"1233",
-    "email":"joacobasile@gmail.com"
+    "email":"marce@gmail.com"
 }
 
+###
+GET http://localhost:5000/api/user/63778538a9af8e9207012ea6 HTTP/1.1
 ###
 GET http://localhost:5000/api/users HTTP/1.1
 
