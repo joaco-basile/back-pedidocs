@@ -1,27 +1,76 @@
+//PETICIONES A USUARIOS
 ###
-POST http://localhost:9000/api/users HTTP/1.1
+POST http://localhost:5000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "name":"marta",
-    "password":"1233"
+    "name":"joaco",
+    "password":"1233",
+    "email":"joacobasile@gmail.com"
 }
 
 ###
-GET http://localhost:9000/api/users HTTP/1.1
+GET http://localhost:5000/api/users HTTP/1.1
 
 ###
-GET http://localhost:9000/api/users/634dd9e360fa69404c6dd7d7 HTTP/1.1
+GET http://localhost:5000/api/login/joacobasile@gmail.com/1233 HTTP/1.1
+
 
 ###
-PUT http://localhost:9000/api/users HTTP/1.1
+PUT http://localhost:5000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "id":"634dd9e360fa69404c6dd7d7",
-    "name":"marto",
-    "password":"1"
+    "id":"634f1b98993c8ce278a53257",
+    "name":"joaco",
+    "password":"1123"
 }
 
 ###
-DELETE  http://localhost:9000/api/users/634ddabc56034f1a9bce5c63 HTTP/1.1
+DELETE  http://localhost:5000/api/users/635070e4c063391f73f9a95e HTTP/1.1
+
+
+
+
+// PETICIONES A PEDIDOS
+
+###
+POST http://localhost:5000/api/pedidos HTTP/1.1
+Content-Type: application/json
+
+{
+    "propietario":"Gonzalo Basile",
+    "nombreCliente":"pablo",
+    "apellidoCliente":"gonzales",
+    "producto":"pantapalon",
+    "cantidadProducto":5,
+    "fecha":"2022-10-23"
+}
+
+###
+GET http://localhost:5000/api/pedidos/Gonzalo Basile HTTP/1.1
+
+###
+GET http://localhost:5000/api/pedidosId/6376f04fcbe75fc1cea654b5 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/pedidos HTTP/1.1
+Content-Type: application/json
+
+{   
+    "id":"634f359f04a06e5639f9db9c",
+    "propietario":"joaco",
+    "nombreClient":"mateo",
+    "apellidoClient":"arno",
+    "producto":"gorra",
+    "cantidadProducto":118971289347,
+    "fechas":{
+        "entrega":"2022-10-23"
+    }
+}
+
+###
+DELETE  http://localhost:5000/api/pedidos/6376c777ff2a507f83e98b28 HTTP/1.1
+
+###
+DELETE  http://localhost:5000/api/pedidos/ HTTP/1.1
