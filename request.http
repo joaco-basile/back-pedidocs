@@ -50,8 +50,8 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:5000/api/pedidos/Gonzalo Basile HTTP/1.1
-
+GET http://localhost:5000/api/pedidos/joaco HTTP/1.1
+    
 ###
 GET http://localhost:5000/api/pedidosId/6376f04fcbe75fc1cea654b5 HTTP/1.1
 

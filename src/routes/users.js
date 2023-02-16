@@ -49,11 +49,11 @@ router.get("/users", (req, res) => {
 
 //Logiar un usuario
 router.post("/login/", (req, res) => {
-    const { email, password } = req.body;
+    const { name, password } = req.body;
 
-    console.log("se esta ferificando los valores", email, password);
+    console.log("se esta validando los valores", name, password);
 
-    userSchema.findOne({ email }, (error, user) => {
+    userSchema.findOne({ name }, (error, user) => {
         //error al buscar el usuario
         if (error) {
             console.log("No se encontro el usuario");
@@ -85,8 +85,7 @@ router.post("/login/", (req, res) => {
 
         //respuesta en caso de que todo este ok
         res.json({
-            ok: true,
-            usuario: user,
+            user
         });
     });
 });
