@@ -54,6 +54,7 @@ router.put("/pedidos", (req, res) => {
             producto,
             cantidadProducto,
             fechas,
+            isFinish,
         },
     } = req.body;
 
@@ -69,6 +70,7 @@ router.put("/pedidos", (req, res) => {
                         producto,
                         cantidadProducto,
                         fechas,
+                        isFinish,
                     },
                 },
             }

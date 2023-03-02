@@ -25,6 +25,19 @@ const pedidoSchema = mongo.Schema({
         type: String,
         required: false,
     },
+
+    isFinish: {
+        type: Boolean,
+        required: true,
+    },
+    telefono: {
+        type: String,
+        required: true,
+    },
+    ubicacion:{
+        type: String,
+        required: false,
+    },
 });
 
 module.exports = mongo.model("Pedido", pedidoSchema);
