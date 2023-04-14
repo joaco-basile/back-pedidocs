@@ -1,6 +1,6 @@
 //PETICIONES A USUARIOS
 ###
-POST http://localhost:5000/api/users HTTP/1.1
+POST http://localhost:8080/api/users HTTP/1.1
 Content-Type: application/json
 
 {
@@ -10,16 +10,16 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:5000/api/user/63778538a9af8e9207012ea6 HTTP/1.1
+GET http://localhost:8080/api/user/63778538a9af8e9207012ea6 HTTP/1.1
 ###
-GET http://localhost:5000/api/users HTTP/1.1
+GET http://localhost:8080/api/users HTTP/1.1
 
 ###
-GET http://localhost:5000/api/login/joacobasile@gmail.com/1233 HTTP/1.1
+GET http://localhost:8080/api/login/joacobasile@gmail.com/1233 HTTP/1.1
 
 
 ###
-PUT http://localhost:5000/api/users HTTP/1.1
+PUT http://localhost:8080/api/users HTTP/1.1
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:5000/api/users/635070e4c063391f73f9a95e HTTP/1.1
+DELETE  http://localhost:8080/api/users/635070e4c063391f73f9a95e HTTP/1.1
 
 
 
@@ -37,26 +37,28 @@ DELETE  http://localhost:5000/api/users/635070e4c063391f73f9a95e HTTP/1.1
 // PETICIONES A PEDIDOS
 
 ###
-POST http://localhost:5000/api/pedidos HTTP/1.1
+POST http://localhost:8080/api/pedidos HTTP/1.1
 Content-Type: application/json
 
 {
-    "propietario":"Gonzalo Basile",
+    "propietario":"joaco",
     "nombreCliente":"pablo",
     "apellidoCliente":"gonzales",
     "producto":"pantapalon",
     "cantidadProducto":5,
-    "fecha":"2022-10-23"
+    "fecha":"2022-10-23",
+    "isFinish":false,
+    "telefono":261597123
 }
 
 ###
-GET http://localhost:5000/api/pedidos/joaco HTTP/1.1
+GET http://localhost:8080/api/pedidos/joaco HTTP/1.1
     
 ###
-GET http://localhost:5000/api/pedidosId/6376f04fcbe75fc1cea654b5 HTTP/1.1
+GET http://localhost:8080/api/pedidosId/6376f04fcbe75fc1cea654b5 HTTP/1.1
 
 ###
-PUT http://localhost:5000/api/pedidos HTTP/1.1
+PUT http://localhost:8080/api/pedidos HTTP/1.1
 Content-Type: application/json
 
 {   
@@ -72,7 +74,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:5000/api/pedidos/6376c777ff2a507f83e98b28 HTTP/1.1
+DELETE  http://localhost:8080/api/pedidos/6376c777ff2a507f83e98b28 HTTP/1.1
 
 ###
-DELETE  http://localhost:5000/api/pedidos/ HTTP/1.1
+DELETE  http://localhost:8080/api/pedidos/ HTTP/1.1
