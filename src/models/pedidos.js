@@ -25,7 +25,6 @@ const pedidoSchema = mongo.Schema({
         type: String,
         required: false,
     },
-
     isFinish: {
         type: Boolean,
         required: true,
@@ -34,7 +33,7 @@ const pedidoSchema = mongo.Schema({
         type: String,
         required: true,
     },
-    ubicacion:{
+    ubicacion: {
         type: String,
         required: false,
     },
